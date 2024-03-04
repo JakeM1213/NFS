@@ -1,0 +1,90 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* or any color you prefer */
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fallback fonts */
+
+}
+
+.content {
+    text-align: center;
+    color: white; /* assuming you want white text on a black background */
+}
+
+/* Adjusting h1 separately in case you need to apply specific styles to it */
+#main-text {
+    margin: 0 0 20px; /* This reduces space above the h1, adjust as needed */
+}
+
+.content p {
+    margin: 10px 0; /* Adjust the top and bottom margin to manage spacing */
+    line-height: 1.2;
+}
+
+
+
+@keyframes flash {
+    0%, 100% { color: white; }
+    50% { color: darkgreen; }
+}
+
+#main-text {
+    animation: flash 1s infinite;
+}
+
+.glitch {
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 0 darkgreen;
+    }
+    20% {
+        text-shadow: -2px 0 green;
+    }
+    40% {
+        text-shadow: 2px 0 darkgreen;
+    }
+    60% {
+        text-shadow: -2px -2px green;
+    }
+    80% {
+        text-shadow: 2px 2px darkgreen;
+    }
+    100% {
+        text-shadow: 1px 1px green;
+    }
+}
+#rsvp-button {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    background-color: black;
+    color: darkgreen;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid darkgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#rsvp-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px darkgreen;
+}
+
+.countdown {
+    position: fixed; /* Change to fixed to position relative to the viewport */
+    top: 20px;
+    right: 20px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    color: darkgreen; /* Keeps the text color without flashing */
+    background-color: transparent; /* Ensures no background color */
+    padding: 10px;
+    border: none; /* Removes the border */
+}
